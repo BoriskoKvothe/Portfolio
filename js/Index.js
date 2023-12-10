@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
 
       var target = this.hash;
-      var offset = 100;
+      var offset = 9;
 
       $('html, body').animate({
           scrollTop: $(target).offset().top - offset
@@ -211,66 +211,81 @@ $("a.nav-link[href^='#']:not([href='#contactForm'])").on('click', function (even
     });
  });
 
-// Function to toggle contact form visibility
-function toggleContactForm() {
+ // Function to toggle contact form visibility
+ function toggleContactForm() {
+   var contactForm = document.getElementById('contactForm');
+   if (contactForm) {
+     contactForm.style.display = (contactForm.style.display === "none" || contactForm.style.display === "") ? "block" : "none";
+   }
+ }
+
+ // Function to scroll to the contact form
+ function scrollToContact() {
+    console.log("scrollToContact function called");  // Debugging statement
     var contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.style.display = (contactForm.style.display === "none" || contactForm.style.display === "") ? "block" : "none";
+      console.log("Contact form found. Attempting to display and scroll.");  // Debugging statement
+      contactForm.style.display = "block";  // Ensure the form is visible when scrolling to it
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log("Contact form not found.");  // Debugging statement
     }
- }
+  }
 
-
-// Function to scroll to the contact form
-function scrollToContact() {
-    var contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.style.display = "block";  // Ensure the form is visible when scrolling to it
-        contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
- }
-
-// Event listener for the "Contact nav" 
-var contactNavLink = document.querySelector('a.nav-link[href="#contactForm"]');
-if (contactNavLink) {
-    contactNavLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        scrollToContact();
+  var getInTouchLink = document.querySelector('a.nav-link[href="#contactForm"]');
+  if (getInTouchLink) {
+    console.log("Attaching event listener to 'Get In Touch!' link");  // Debugging statement
+    getInTouchLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log("'Get In Touch!' link clicked");  // Debugging statement
+      scrollToContact();
     });
- }
+  }
 
-// Event listener for the "Contact form" footer
-var contactFormButton = document.getElementById('openContactForm');
-if (contactFormButton) {
-    contactFormButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        scrollToContact();
-    });
+ // Event listener for the "Contact nav"
+// Try a more general selector if the specific one isn't working
+var allContactLinks = document.querySelectorAll('a[href="#contactForm"]');
+allContactLinks.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log("'Get In Touch!' or similar link clicked");  // Debugging statement
+    scrollToContact();
+  });
+});
+
+ // Event listener for the "Contact form" footer
+ var contactFormButton = document.getElementById('openContactForm');
+ if (contactFormButton) {
+   contactFormButton.addEventListener('click', function(event) {
+     event.preventDefault();
+     scrollToContact();
+   });
  }
 
     // Typing effect function definition
-   function typingEffect() {
-    // Define two versions of the text for different screen sizes
-    const textFull = "Welcome, I'm Boris a budding Software & Web Developer";
-    const textShort = "Welcome, I'm Boris :)"; // Shorter text for small screens
-    let screenWidth = window.innerWidth;
-    let text = screenWidth <= 576 ? textShort : textFull; // Choose text based on screen width
-    const typingSpeed = 150;
-    let i = 0;
-    const brand = document.querySelector('.navbar-brand');
-        
-     // Clear existing text before starting the typing effect
-     brand.textContent = '';
+    let typingTimer; // Declare typingTimer to manage the timeout
+    function typingEffect() {
+        const textFull = "Welcome, I'm Boris a budding Software & Web Developer";
+        const textShort = "Welcome, I'm Boris :)"; // Shorter text for small screens
+        let screenWidth = window.innerWidth;
+        let text = screenWidth <= 576 ? textShort : textFull; // Choose text based on screen width
+        const typingSpeed = 150;
+        let i = 0;
+        const brand = document.querySelector('.navbar-brand');
 
-    function typeWriter() {
-        if (i < text.length) {
-            brand.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, typingSpeed);
+        clearTimeout(typingTimer); // Clear existing typing timer
+        brand.textContent = ''; // Clear existing text before starting the typing effect again
+
+        function typeWriter() {
+            if (i < text.length) {
+                brand.textContent += text.charAt(i);
+                i++;
+                typingTimer = setTimeout(typeWriter, typingSpeed);
+            }
         }
+        typeWriter();
     }
-    typeWriter();
-}
-typingEffect();
+    typingEffect();
 
     // Update the typing effect on window resize
     window.addEventListener('resize', typingEffect);

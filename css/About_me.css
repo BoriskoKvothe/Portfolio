@@ -54,6 +54,10 @@
 
 
 @media (max-width: 480px) {
+    .top-circle-margin {
+        margin-top: 55px;
+}
+
     .circle-container {
         border-radius: 0; /* Rectangle shape */
         width: 100%; /* Full width */
