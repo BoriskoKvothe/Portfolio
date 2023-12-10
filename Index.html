@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link href="./css/Index.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7974dc8d71.js" crossorigin="anonymous"></script>
+
+    <title>Boris Vavrik Portfolio Software & Web Developer</title>
+</head>
+
+<body>
+
+   <!-- <div id="particles-js"></div>-->
+    <div id="background"></div>
+
+    <!-- Enhanced Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand text-3d-effect" href="#">Welcome, I'm Boris a budding Software & Web Developer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="navHome" href="./index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navAbout" href="./About_me.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navCertifications" href="./Qualifications.html">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactForm">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <!-- indicators to add here -->
+    </ol>
+    <div class="carousel-inner">
+        <!-- First Pair of Images -->
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://www.infoworld.com/article/3663513/the-best-new-css-features.html" target="_blank">
+                    <img src="./media/carousel1.png" class="d-block w-100" alt="First Image">
+                </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://www.infoworld.com/article/3708188/typescript-53-arrives-with-support-for-import-attributes.html" target="_blank">
+                    <img src="./media/carousel2.png" class="d-block w-100" alt="Second Image"> 
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Second Pair of Images -->
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://www.artificialintelligence-news.com/2023/12/07/ai-big-data-expo-demystifying-ai-seeing-past-hype/" target="_blank">
+                    <img src="https://www.artificialintelligence-news.com/wp-content/uploads/sites/9/2023/12/20231130_150115-scaled.jpg" class="d-block w-100" alt="Third Image">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://www.developer-tech.com/news/2023/feb/08/the-most-in-demand-programming-languages-for-2023/" target="_blank">
+                    <img src="./media/Carousel4.png" class="d-block w-100" alt="Fourth Image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- more pairs here -->
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+    <!-- About Section -->
+    <section class="container mt-5 about-me-section linear-grad">
+        <h1>About Me</h1>
+        <p class="gradient-text">
+            Thank you for visiting my website! I'm a seasoned healthcare professional transitioning to a junior software developer, I bring strong problem-solving skills and a collaborative mindset. Completed CompTIA A+ in JavaScript, HTML, CSS, MySQL, Python; currently learning Flask, C++, C, C#, php and more. I'm embarking on an exciting journey to fulfill my dream of entering the digital realm. Open to career opportunities and growth. Click <a href="./About_me.html">HERE</a> for more details.
+        </section>
+      <!-- Portfolio Section -->
+    <section class="container mt-5 project-section" id="portfolio">
+        <h1>My Projects</h1>
+        <div class="row">
+            <!--  replicate columns here -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                   <a href="../Projects/PongGame/Pong.html" target="_blank"> <img src="./media/pong_game.gif" class="card-img-top" alt="Project 1"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Table tennis game. Play against PC opponent. Created using HTML, CSS & JavaScript. Please, click the GIF image to play. </p>
+                        <a href="https://github.com/BoriskoKvothe/PongGame" class="btn" target="_blank"> For GitHub repo, please click here.</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other projects -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="https://github.com/BoriskoKvothe/DatabaseFullStack-repo" target="_blank"><img src="./media/Project2DB.png" class="card-img-top" alt="Project 2"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Full-Stack Database with CRUD functionalities and full-stack approach. Created using HTML, CSS, Python, Flask. </p>
+                        <a href="https://github.com/BoriskoKvothe/DatabaseFullStack-repo" class="btn" target="_blank"> For GitHub repo, please click here.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="./media/Calc.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Scientific version of calculator. Includes trigonometry, BIN, HEX using HTML, CSS and JavaScript. </p>
+                        <a href="#" class="btn"> Coming Soon!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+<!-- Start of the new Footer -->
+<footer id="contact" class="footer-distributed">
+
+    <div class="footer-left">
+       
+        
+        <p class="footer-links">
+            <a href="./About_me.html" class="btn btn-link footer-btn">About</a>
+            <a href="#" class="btn btn-link footer-btn" id="openContactForm">Contact Form</a>
+        </p> 
+        
+        <a href="./Index.html">
+            <img src="./media/thislogo!.png" alt="Company Logo" class="footer-logo">
+        </a>
+
+        <form id="contactForm" action="php/process_form.php" method="post">
+            <h3>Contact Me</h3>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="rating">Rate my portfolio design (0-10):</label>
+                <div class="rating">
+                    <input type="range" id="rating" name="rating" min="0" max="10">
+                    <div id="rating-description">Needs much improvement</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Suggestions, Feedback, or Career Opportunities:</label>
+                <textarea class="form-control" id="feedback" name="feedback" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        
+
+        <h3 class="footer-company-name font-weight-bold">Skyliron © 2023</h3>
+
+ <!-- Return to Top button -->
+            <a href="#" id="return-to-top" class="btn btn-light">Return to Top</a>
+
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p>London, United Kingdom</p>
+        </div>
+
+        <div>
+            <a href="mailto:borisvavrik@borisvavrik.co.uk" class="email-link">
+                <i class="fa fa-envelope"></i>
+                <span>borisvavrik@borisvavrik.co.uk</span>
+            </a>
+        </div>
+        
+
+        <!-- Move the button and links to the center -->
+        <div class="footer-center">
+           
+            
+            <!-- Links to social platforms -->
+            <div class="footer-icons">
+             <!--  <a href="#" class="bg-transparent"><i class="fab fa-facebook-f"></i></a>--> 
+            <!--    <a href="#" class="bg-transparent"><i class="fab fa-twitter"></i></a> --> 
+                <a href="https://www.linkedin.com/in/boris-vavrik-59b750153/" class="bg-transparent" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/BoriskoKvothe" class="bg-transparent" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <h6 id="footer-r-heading" class="font-weight-bold">My career focus areas & interests.</h6>
+                         
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item small p-2 font-weight-bold btn-styles">Front-end</li>
+            <li class="list-group-item small p-2 font-weight-bold btn-styles">Back-end</li>
+            <li class="list-group-item small p-2 font-weight-bold btn-styles">Full-stack</li>
+            <li class="list-group-item small p-2 font-weight-bold btn-styles">Web Design</li>
+            <li class="list-group-item small p-2 font-weight-bold btn-styles">Data Analysis</li>
+            <li class="list-group-item small p-2 font-weight-bold btn-styles">Databases</li>
+            <li class="list-group-item small p-2 font-weight-bold btn-styles">Research</li>
+            <!-- specific skills or interests here -->
+        </ul>
+    </div>
+</footer>
+<!-- End of the new Footer -->
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+    <!-- Include jQuery -->
+
+<!-- Include the Ripples plugin -->
+<script src="https://cdn.jsdelivr.net/npm/jquery.ripples/dist/jquery.ripples-min.js"></script>
+     
+ 
+    <!-- Custom JavaScript -->
+    <script src="./js/Index.js"></script>
+
+   <!-- Your custom JavaScript here -->
+  
+
+
+    <!-- Back to top button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div class="modal fade" id="contactFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Include the contact form code here -->
+                </div>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+
+</html>

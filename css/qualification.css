@@ -1,0 +1,57 @@
+
+/* Education, Certificates, and Ongoing Development Sections */
+
+.container.mt-5 {
+    transform: scale(0.80);
+    padding: 10px; /* Adjust as needed */
+    background-color: #954343; 
+    margin-top: 3%;
+    margin-bottom: 3%;
+    box-shadow: 0 8px 12px 0 #e2524ac1; /* Shadow effect */
+}
+
+
+#education, #certificates, #ongoing-development {
+    background-color: #8dd8fac1; /* Light background for contrast */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#education h1, #certificates h1, #ongoing-development h1 {
+    color: #2a2429;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #2a2429;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #fafcfac1;
+}
+
+
+/* Scale down each section by 5% and adjust margin */
+.container.mt-5 {
+    transform: scale(0.80); /* Scale down by 5% */
+    margin-top: 3%; /* Adjust top margin */
+    margin-bottom: 3%; /* Adjust bottom margin for spacing between sections */
+}
+
+/* Adjust the top margin of the first section to ensure it doesn't overlap with the header */
+#education {
+    margin-top: 2%; /* Increase top margin for the first section */
+}
+

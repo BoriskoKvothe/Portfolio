@@ -1,0 +1,598 @@
+
+
+/* Typing effect styles */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+} /*footer*/
+
+@keyframes ripple-animation {
+    from {
+        transform: scale(0);
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 85%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Essential styles for the water ripple effect */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Keeps the background behind your content */
+    background-image: url('../media/bg1.jpg'); /* Update with your image path */
+    background-size: cover; /* Ensures the image covers the whole page */
+}
+
+
+.ripple-background .circle {
+    position: absolute;
+    border: 2px solid #fff;
+    opacity: 0.4;
+    border-radius: 50%;
+    animation: ripple-animation 15s infinite;
+    background: transparent;
+}
+
+/* styles.css */
+h1, h2, h3, h4, h5, h6 {
+        color: #2a2429;
+        line-height: 1.6;
+    }
+    
+     
+
+/* Default navbar style NEW */
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #e2524ac1;
+}
+
+
+#mainNavbar {
+    transition: background-color 1s ease; /* Smooth transition between colors */
+    
+    font-size: 1.1rem; /* for example, adjusting font size affects many navbar items */
+  }
+
+.navbar {
+    z-index: 100; /* an example, can be any number greater than -1 */
+    padding: 1.2rem 1.8rem;
+    font-size: 1.15rem; /* making the navbar text 15% larger */
+    /*transition: background-color 0.5s ease-in-out, padding 0.5s ease-in-out; */
+    transition: background-color 1s ease;
+}
+                           /*smooth transition* /
+/* Custom styles for navigation bar */
+.navbar-color-1 { background-color: #fafcfa !important; } 
+.navbar-color-2 { background-color: #8dd8fa !important; } 
+.navbar-color-3 { background-color: #e2524a !important; } 
+
+/* reducing padding to tighten navbar */
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    animation: typing 4s steps(30, end) 1s 1 normal both;
+    color: #2a2429 !important; 
+    /* ... other existing styles ... 
+    animation: colorChange 10s infinite, typing 4s steps(30, end) 1s 1 normal both;*/
+    }
+    
+   
+ .nav-link {
+    color: #2a2429 !important;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    transform: scale(1.3); /* scale effect on hover */
+}
+
+.nav-item {
+    transition: background 0.3s ease-in-out; /* smooth transition for hover effect */
+    border-radius: 10px;
+}
+
+.nav-item:hover {
+    background-color: #4a464678; /* slight darkening effect on hover */
+}
+
+/* Custom CSS for the navbar toggle button */
+.navbar-toggler-icon {
+    background-color: #2a2429;
+}
+
+
+/* Carousel customization */
+#carouselExampleIndicators {
+    margin-top: 200px; /* Adjust this value as needed to lower the carousel */
+}
+
+#carouselExampleIndicators .carousel-item .row {
+    justify-content: center; /* Center the items horizontally in the row */
+    
+}
+
+
+
+.carousel-item {
+    height: 50vh;
+    min-height: 250px;
+    width: 100%/*45%*/;
+    background: no-repeat center center scroll;
+    background-size: cover;
+    
+   }
+
+
+.carousel-item .col-md-6 {
+    /*background-color: #f8c6c9c1; */
+    flex: 0 0 50%; /* Half the width of the carousel item */
+    max-width: 40%; /* Maximum width of each column */
+    padding: 10px; /* Adjust padding as needed */
+       
+}
+
+
+/* Ensures the carousel images cover the container uniformly */
+.carousel-item .col-md-6 img {
+    width: 100%;
+    max-height: 380px; /* Set height for images */
+    object-fit: cover; /* Ensures images cover the area */
+    box-shadow: 0 8px 12px 0 #e2524ac1; /* Shadow effect */
+    border: 5px solid #8dd8fac1; 
+    border-image: linear-gradient(45deg, #8dd8fac1, #e2524ac1) 1 round !important;
+}
+
+
+.linear-grad {
+    background: linear-gradient(to right, #8dd8fac1, #fafcfac1); 
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #FF6B6B, #556270);
+    -webkit-background-clip: text; /* For WebKit browsers like Chrome and Safari */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Standard property */
+    display: inline;
+}
+
+
+
+/* Portfolio styles */
+#portfolio .card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+#portfolio .card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Adding gradient border to the About Me section */
+.about-me-section {
+    position: relative;
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, #6dd5facc, #e2524ac1) 1 round;
+    box-shadow: 0 8px 12px 0 #e2524ac1; /* Shadow effect */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%; /* Adjust the width as per design requirement */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.project-section {
+    background-color: #8dd8fac1;
+    border: 1px dashed #e2524ac1;
+}
+
+.project-section:hover {
+    background-color: #6dd5facc !important;
+}
+
+.card {
+    background-color: #e2524ac1;
+    color: #fafcfa;
+}
+
+
+/* Footer */
+
+footer {
+    transition: background-color 1s; /* Add transition effect for smooth color change */
+    position: relative; /* Ensuring the footer stays in the right place */
+    background-color: #8dd8fac1 !important;
+    border: 1px dashed #e2524ac1;
+}
+
+/* New styles for footer hover effect */
+footer:hover {
+    background-color: #6dd5facc !important; /* background for a hover effect */
+    animation: float 3s infinite;
+}
+
+.footer-distributed {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+ /* Custom CSS for footer buttons */
+.footer-btn {
+            background-color: #e2524ac1; /* Set your desired background color */
+            border: 2px solid #8dd8fac1; /* Set your desired border color */
+            margin-right: 10px; /* Add some margin between buttons */
+        }
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #2a2429;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #3a72d3;
+}
+
+list-group-item {
+    color: #2a2429;
+}
+
+
+#contactForm {
+    display: none;
+}
+
+
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #2a2429;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #083766;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-logo {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 100px; 
+}
+
+
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35.5%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #e2524ac1;
+    border: 2px solid #8dd8fac1;
+    color: #fafcfa;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #2a2429;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #2a2429;
+    text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+    
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #2a2429;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #2a2429;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #e2524ac1;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #2a2429;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+#return-to-top {
+    display: inline-block; /* Inline with potential other buttons or content */
+    margin-top: 20px; /* Adjust space from the top content within the footer */
+    padding: 10px 20px; /* Button internal spacing */
+    background-color: #e2524ac1; /* Bootstrap secondary button color*/
+    color: #2a2429; /* Text color */
+    border: 2px solid #8dd8fac1;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-weight: bold; 
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+#return-to-top:hover {
+    background-color: #5555557d; /* Slightly darker shade on hover */
+}
+
+.btn-styles {
+    background-color: #e2524ac1;
+    border: 2px solid #8dd8fac1;
+    color: #fafcfa;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #5555557d;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap other items */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: #2a2429; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #5555557d; /* Add a dark-grey background on hover */
+}
+
+/* Media query*/
+
+/* Adjust font size for smaller screens */
+@media (max-width: 576px) {
+
+    #mainNavbar .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .navbar-brand {
+        width: 100%; /* Ensure brand takes full width */
+        order: 1; /* Position brand first */
+    }
+
+    .navbar-toggler {
+        order: 2; /* Position toggle button second */
+        align-self: center; /* Center toggle button horizontally */
+        margin-top: 10px; /* Add space above toggle button */
+    }
+
+    .navbar-collapse {
+        order: 3; /* Ensure navbar collapse content comes last */
+    }
+
+    
+    #carouselExampleIndicators {
+        margin-top: 112px; /* Adjust to lower the carousel */
+    }
+    }
+    
+
+@media (max-width: 767px) {
+    #carouselExampleIndicators {
+        margin-top: 50px; /* Adjust the top margin if needed */
+    }
+
+    .carousel-item .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel-item .col-md-6 img {
+        height: auto; /* Adjust height to maintain aspect ratio */
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        padding-left: 10px; /* Adjust as needed */
+        padding-right: 5px; /* Adjust as needed */
+        font-size: 90%; /* Optionally reduce the font size */
+    }
+    .carousel-item .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel-item .col-md-6 img {
+        height: auto; /* Adjusts the height to maintain aspect ratio on smaller screens */
+    }
+
+    .about-me-section {
+        max-width: 100%; /* Full width for very small screens */
+    }
+    }
+
+
+
+@media (max-width: 880px) {
+
+    .navbar-brand {
+        padding-left: 40px; /* Adjust as needed */
+        padding-right: 5px; /* Adjust as needed */
+        font-size: 90%; /* Optionally reduce the font size */
+    }
+
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+    /* Ensures the carousel images cover the container uniformly */
+
+    #carouselExampleIndicators {
+        margin-top: 290px; /* Adjust to lower the carousel */
+    }
+
+    .carousel-item .col-md-6 {
+        background-color: #2355c054; /* Light grey background, change as needed */
+        flex: 0 0 50%; /* Half the width of the carousel item */
+        max-width: 47%; /* Maximum width of each column */
+        padding: 10px; /* Adjust padding as needed */
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel-item {
+        max-width: 100%; 
+    }
+
+    .about-me-section {
+        max-width: 95%; 
+    }
+}
+
+
+
+@media (min-width: 1301px) {
+    
+    .carousel-item .col-md-6 img {
+        
+        height: 370px; /* Set a fixed height for all images */
+        object-fit: fill; /* Ensures images cover the area */
+       
+    }
+}
+

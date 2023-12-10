@@ -1,0 +1,96 @@
+/* Ensuring the main content area doesn't have its own background */
+#main-content {
+    background-color: transparent;
+    padding-top: 5%; /* Add padding to push content down */
+}
+
+
+/* Circle container styles */
+.circle-container {
+    background: linear-gradient(45deg, hsla(196, 93%, 70%, 0.6), hsla(350, 100%, 73%, 0.6));
+    border-radius: 50%;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+/* Apply hover effect only when the circle is not expanded */
+.circle-container:not(.expanded):hover {
+    transform: translateY(-10px);
+}
+
+/* Hide the content initially */
+.circle-content {
+    display: none;
+}
+
+/* Adjusted expanded circle styles */
+.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    cursor: default;
+    max-height: 80vh;
+    overflow-y: auto; /* Enables both horizontal and vertical scrolling */
+    width: 70%; /* Increased width */
+    padding: 30px; /* Increased padding */
+    background: linear-gradient(45deg, hsla(196, 93%, 70%, 1), hsla(350, 100%, 73%, 1));
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.50);
+}
+
+
+/* Show the content in expanded state */
+.expanded .circle-content {
+    display: block;
+    font-size: 1rem; /* Adjust font size */
+    text-align: left;
+    overflow-wrap: break-word;
+    margin: 0 14%; /* Increased margin for breathing space */
+}
+
+
+
+@media (max-width: 480px) {
+    .circle-container {
+        border-radius: 0; /* Rectangle shape */
+        width: 100%; /* Full width */
+        height: auto; /* Auto-adjust height */
+        padding: 10px; /* Padding */
+        margin-bottom: 15px; /* Space between blocks */
+    }
+
+    .circle-container .circle-content {
+        display: block; /* Always show content */
+    }
+}
+
+
+
+/* Responsive adjustments for circles */
+@media (max-width: 768px) {
+    .circle-container {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .expanded {
+        transform: translate(-50%, -50%) scale(0.7);
+        max-height: 40vh;
+        width: 80%; /* Increased width for smaller screens */
+        padding: 27px 15px 15px 45px; /* Adjusted padding */
+    }
+
+    .expanded .circle-content {
+        font-size: 0.9rem;
+        margin: 0 10px; /* Consistent margin */
+    }
+}
+
+@media (min-width: 1200px)  {
+    .expanded {max-width: 70%;
+    }
+
+}
